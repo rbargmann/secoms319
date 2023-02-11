@@ -1,62 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FindYourTech</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="./navbar-fixed.css" rel="stylesheet">
+
 </head>
 
 <style>
-    main{
-        margin: 16px;
-    }
-</style>
+  main {
+    margin: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:rgb(141, 195, 249);
+    padding: 10px;
 
-<header>
-    <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  }
+  h1{
+    text-align-last: center;
+  }
   
-        <div class="collapse navbar-collapse" id="navbarsExample02">
-          <ul class="navbar-nav me-auto">
-            <!-- <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="./aboutus.html">About Us</a>
-            </li>
-          </ul>
-          <form role="search">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-          </form>
-        </div>
+
+</style>
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">About us</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
 <main>
-    <h1 class="display-4"><strong>About Us</strong></h1>
 
-    <p>
-        <h1 class="display-6">Rangsimun Bargmann</h1>
-    </p>
-    <div class="text-body-emphasis">
-      <img src="./images/MeRB.JPG" alt="Picture of Rangsimun" width="640">
-        <p>
-            I am currently a Junior in Software Engineering, with previous studies as a Chemical Engineer.
-            This webpage was created as part of Assignment 1 for COM S 319 and includes a catalog of a 
-            variety of laptops constumers can purchase.
-        </p>
-        <p>
-          Contact Information:<br>
-          Email: rgbrgmnn@iastate.edu<br>
-          Phone: 605-553-8966
-        </p>
+  <section class="py-4 text-center container">
+    <div class="row py-lg-4">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">About us</h1>
+      </div>
     </div>
+  </section>
+
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 ">
+        <div class="col">
+          <div class="card shadow-sm">
+            <p>
+              
+            <h1 class="display-6">Rangsimun Bargmann</h1>
+          
+            </p>
+            <div class="text-body-emphasis">
+              <img src="./images/MeRB.JPG" alt="Picture of Rangsimun" width="500" class="center">
+              <p class="center">
+                I am currently a Junior in Software Engineering, with previous studies as a Chemical Engineer.
+                This webpage was created as part of Assignment 1 for COM S 319 and includes a catalog of a
+                variety of laptops constumers can purchase.
+              </p>
+              <p class="center">
+                <strong>Contact Info:</strong><br>
+                Email: rgbrgmnn@iastate.edu<br>
+                Phone: 605-553-8966
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <p>
+            <h1 class="display-6">Autrin Hakimi</h1>
+            </p>
+            <div class="text-body-emphasis">
+              <img src="./images/IMG_4781.jpg" alt="Picture of Autrin" class="center">
+              <p class="center">
+                Autrin Hakimi is a computer science major at Iowa State University. He is a programmer in Java, Python,
+                C++ HTML, CSS, and JavaScript.
+              </p>
+              <p class="center">
+                <strong>Contact Info:</strong><br>
+                Email: autrinhakimi@gmail.com<br>
+                Phone: 515-815-1016
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
+<body>
+  
+<footer class="text-muted py-5" style="background-color:rgb(141, 195, 249)">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">FindYourTech by Autrin and Rangsimun</p>
+    <p class="mb-0">Have a question?<a href="/"> Contact Us</a><a class="nav-link" href="./aboutus.html"></a></p>
+  </div>
+</footer>
+
+</body>
 </html>
