@@ -45,6 +45,7 @@ fetch("data.json")
               </div>
             </div>
             `;
+            mycol.className = "col";
             mainContainer.append(mycol);
         }
 
