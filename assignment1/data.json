@@ -57,7 +57,7 @@
                 "operatingSystem": "macOS Monterey 12"
             },
             "price":"",
-            "image_url":"./images/HPSpectre.jpeg",
+            "image_url":"./images/m1mac.jpeg",
             "product_url": "https://www.bestbuy.com/site/macbook-pro-14-laptop-apple-m1-pro-chip-16gb-memory-512gb-ssd-space-gray/6450853.p?skuId=6450853"
         },
         {
@@ -72,7 +72,7 @@
                 "operatingSystem": "Windows 11 Home"
             },
             "price":"",
-            "image_url":"./images/HPSpectre.jpeg",
+            "image_url":"./images/DellXPS13.jpeg",
             "product_url": "https://www.bestbuy.com/site/dell-xps-13-plus-13-4-fhd-touch-screen-laptop-12th-gen-intel-evo-i7-16gb-memory-512gb-ssd-silver/6520770.p?skuId=6520770"
         },
         {
@@ -87,7 +87,7 @@
                 "operatingSystem": "Windows 11 Home"
             },
             "price":"",
-            "image_url":"./images/HPSpectre.jpeg",
+            "image_url":"./images/LenovoThinkpad.jpg",
             "product_url": "https://www.bestbuy.com/site/lenovo-thinkpad-l13-yoga-13-3-wuxga-1920-x-1200-touch-2-in-1-laptop-core-i7-1255u-16gb-memory-512gb-ssd-black/6520607.p?skuId=6520607"
         }
     ],
