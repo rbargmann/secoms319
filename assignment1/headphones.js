@@ -8,12 +8,12 @@ fetch("data.json")
         for (let i = 0; i < data.Headphones.length; i++){
             let name = data.Headphones[i].productName;
             let url = data.Headphones[i].product_url;
-            let noiseCancelling = data.Headphones[i].noiseCancelling;
-            let connectionType = data.Headphones[i].connectionType;
-            let waterResistant = data.Headphones[i].waterRessistant;
-            let batteryLife = data.Headphones[i].batterLife;
-            let microphone = data.Headphones[i].microphone;
-            let compatableOS = data.Headphones[i].compatableOS;
+            let noiseCancelling = data.Headphones[i].productDescription.noiseCancelling;
+            let connectionType = data.Headphones[i].productDescription.connectionType;
+            let waterResistant = data.Headphones[i].productDescription.waterRessistant;
+            let batteryLife = data.Headphones[i].productDescription.batterLife;
+            let microphone = data.Headphones[i].productDescription.microphone;
+            let compatableOS = data.Headphones[i].productDescription.compatableOS;
             let image = data.Headphones[i].image_url;
         
 
