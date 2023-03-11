@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -17,10 +17,10 @@
   <style>
     main {
       font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif";
-      background-color:rgb(255, 255, 255);
+      background-color: rgb(255, 255, 255);
+ 
 
 
-  
     }
 
     .bd-placeholder-img {
@@ -73,88 +73,133 @@
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
     }
-    /* div{
-      border: 1px;
-            text-align: center;
-            padding: 10px;
-    } */
   </style>
 </head>
 
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link" href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./laptops.html">Laptops</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Headphones</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./aboutus.html">About us</a>
-              </li>
-              <!-- <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li> -->
-            </ul>
-            <!-- <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Search</button>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./laptops.html">Laptops</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./headphones.html">Headphones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aboutus.html">About us</a>
+            </li>
+
+          </ul>
+          <!-- <form class="d-flex" role="search">
+             <input class="form-control me-2" type="search" placeholder="Search Items" aria-label="Search">
+              <input id="search-input" class="form-control me-2" type="search" placeholder="Search Items" aria-label="Search">
+              <button class="btn btn-outline-light" onclick="myFunction()">
+                Search
+              </button>
             </form> -->
 
-            <!-- <label for="search"> Search Products</label>
-            <input class="form-control me-2" placeholder="Search Items" aria-label="Search" type="search" id="search"
-              data-search>
-            <button class="btn btn-outline-light" type="submit">
-              Search
-            </button> -->
-
-            <form class="d-flex" id="search-form">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
-              <button class="btn btn-outline-light" type="submit">Search</button>
-            </form>
-          </div>
+          <!-- <label for="search"> Search Products</label>
+          <input class="form-control me-2" placeholder="Search Items" aria-label="Search" type="search" id="search"
+            data-search>
+          <button class="btn btn-outline-light" type="submit">
+            Search
+          </button> -->
+          <form class="d-flex" id="search-form">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
         </div>
-      </nav>
-    </header>
-    <main>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
     <section class="py-5 text-center container">
       <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light" style="color: rgb(0, 0, 0);">Headphones</h1>
-          <h6 class="lead text-muted" style="color: aliceblue;">A collection of headphones appropriate for a wide variety of users. From developers, to
-            students, to regular use.<br><br> Find Your Headphones Here!</h6>
+          <h1 class="fw-light" style="color: rgb(0, 0, 0);">Find Your Tech</h1>
+          <h6 class="lead text-muted" style="color: aliceblue;">Click below to see offerings for a variety of different
+            techonology</h6>
+          <!-- <p>
+          <a href="#" class="btn btn-primary my-2">Main call to action</a>
+          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+        </p> -->
         </div>
       </div>
     </section>
+
+
+
     <div class="album py-5 bg-light">
-      <div class="container" >
-        <div id="headphones" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"> 
+      <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./images/HPSpectre.jpeg" alt="Laptops" hspace="30" vspace="30">
+              <div class="card-header">
+                <p class="card-text">Laptops</p>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                      onclick="location.href='./laptops.html'">Visit Page</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <img src="./images/beats.jpg" alt="Headphones" hspace="30" vspace="30">
+              <div class="card-header">
+                <p class="card-text">Headphones</p>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary"
+                      onclick="location.href='./headphones.html'">Visit Page</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </main>
-  <footer class="text-muted py-5" style="background-color:rgb(255, 255, 255)">
-  <div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Back to top</a>
-    </p>
-    <p class="mb-1">FindYourTech by Autrin and Rangsimun</p>
-    <p class="mb-0">Have a question?<a href="/"> Contact Us</a><a class="nav-link" href="./aboutus.html"></a></p>
-  </div>
+
+  <footer class="text-muted py-5" style="background-color:rgb(141, 195, 249)">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Back to top</a>
+      </p>
+      <p class="mb-1">FindYourTech by Autrin and Rangsimun</p>
+      <p class="mb-0">Have a question?<a href="./aboutus.html"> Contact Us</a><a class="nav-link"
+          href="./aboutus.html"></a></p>
+    </div>
   </footer>
-  <script src="./headphones.js"></script>
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
+
 </html>
