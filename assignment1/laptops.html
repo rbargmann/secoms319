@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <meta name="author" content="Autrin Hakimi, Rangsimun Bargmann, Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.108.0">
   <title>FindYourTech</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -73,6 +73,15 @@
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
     }
+    .shadow-sm{
+      background-color:  rgb(39, 37, 37);
+      color: aliceblue;
+ } 
+  .card-header{
+    color: black;
+    background-color: aliceblue;
+  } 
+    
   </style>
 </head>
 
@@ -90,7 +99,7 @@
               <a class="nav-link" href="./index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Laptops</a>
+              <a class="nav-link active" aria-current="page" href="./laptops.html">Laptops</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./headphones.html">Headphones</a>
@@ -110,8 +119,8 @@
             Search
           </button> -->
           <!-- Add a form element around the search input field -->
-          <form class="d-flex" id="search-form">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+          <form class="d-flex" id="search-form" onsubmit="searchLaptops(); return false;">
+            <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" id="search-input">
             <button class="btn btn-outline-light" type="submit">Search</button>
           </form>
         </div>
@@ -125,16 +134,12 @@
           <h1 class="fw-light" style="color: rgb(0, 0, 0);">Looking for a laptop?</h1>
           <h6 class="lead text-muted" style="color: aliceblue;">A collection of Laptops tailored to a wide variety of
             users. From developers, to
-            students, to regular household use.<br><br> Find Your Laptop Here!</h6>
-
-
+            students, to regular household use.<br></h6>
+            <p style="font-weight: bold; font-size: xx-large; ">✅ Find Your Laptop Here!</p>
         </div>
       </div>
     </section>
     <div class="album py-5 bg-light">
-
-   
-
       <div class="container" >
         <div id="laptops" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" >
         </div>
@@ -154,6 +159,7 @@
 
   <script src="./laptops.js"></script>
   <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./data.json"></script>
 
 </body>
 
