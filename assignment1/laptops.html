@@ -5,21 +5,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="author" content="Autrin Hakimi, Rangsimun Bargmann, Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.108.0">
   <title>FindYourTech</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link href="./styles/navbar-fixed.css" rel="stylesheet">
   <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="index.js" defer></script>
 
   <style>
     main {
-      font-family: 'Times New Roman', Times, serif;
-      background-color:rgb(141, 195, 249);
-      padding: 10px;
+      font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif";
+      background-color: rgb(255, 255, 255);
 
-  
+
+
     }
 
     .bd-placeholder-img {
@@ -72,91 +73,87 @@
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
     }
-    /* div{
-      border: 1px;
-            text-align: center;
-            padding: 10px;
-    } */
   </style>
 </head>
 
-
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link" href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Laptops</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./headphones.html">Headphones</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./aboutus.html">About us</a>
-              </li>
-              <!-- <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li> -->
-            </ul>
-             <form class="d-flex" id="search-form">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
-              <button class="btn btn-outline-light" type="submit">Search</button>
-            </form>
-          </div>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Laptops</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./headphones.html">Headphones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./aboutus.html">About us</a>
+            </li>
+          </ul>
+          <!-- <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form> -->
+          <!-- <label for="search"> Search Products</label>
+          <input class="form-control me-2" placeholder="Search Items" aria-label="Search" type="search" id="search"
+            data-search>
+          <button class="btn btn-outline-light" type="submit">
+            Search
+          </button> -->
+          <!-- Add a form element around the search input field -->
+          <form class="d-flex" id="search-form">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
         </div>
-      </nav>
-    </header>
-
-
-    <main>
+      </div>
+    </nav>
+  </header>
+  <main>
     <section class="py-5 text-center container">
       <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light" style="color: aliceblue;">Looking for a laptop?</h1>
-          <h6 class="lead text-muted" style="color: aliceblue;">A collection of Laptops tailored to a wide variety of users. From developers, to
+          <h1 class="fw-light" style="color: rgb(0, 0, 0);">Looking for a laptop?</h1>
+          <h6 class="lead text-muted" style="color: aliceblue;">A collection of Laptops tailored to a wide variety of
+            users. From developers, to
             students, to regular household use.<br><br> Find Your Laptop Here!</h6>
-          <!-- <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-        </p> -->
+
+
         </div>
       </div>
     </section>
-
-
-
     <div class="album py-5 bg-light">
-      <div class="container" >
 
-        <div id="laptops" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+   
+
+      <div class="container" >
+        <div id="laptops" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" >
         </div>
       </div>
     </div>
+  </main>
 
-</main>
+  <footer class="text-muted py-5" style="background-color:rgb(255, 255, 255)">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Back to top</a>
+      </p>
+      <p class="mb-1">FindYourTech by Autrin and Rangsimun</p>
+      <p class="mb-0">Have a question?<a href="/"> Contact Us</a><a class="nav-link" href="./aboutus.html"></a></p>
+    </div>
+  </footer>
 
-<footer class="text-muted py-5" style="background-color:rgb(141, 195, 249)">
-  <div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Back to top</a>
-    </p>
-    <p class="mb-1">FindYourTech by Autrin and Rangsimun</p>
-    <p class="mb-0">Have a question?<a href="/"> Contact Us</a><a class="nav-link" href="./aboutus.html"></a></p>
-  </div>
-</footer>
-
-<script src="./laptops.js"></script>
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="./laptops.js"></script>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
