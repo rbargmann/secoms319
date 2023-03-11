@@ -4,7 +4,7 @@ body {
     padding-top: 4.5rem;
     min-height: 100vh;
     /* min-height: -webkit-fill-available; */
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif";
 }
 
 
@@ -23,20 +23,15 @@ html {
 
 main {
     height: auto;
-    /* height: -webkit-fill-available; */
     /* max-height: 100vh; */
     overflow-x: auto;
     overflow-y: hidden;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial","sans-serif";
+    background-color:white;
 }
 
 .dropdown-toggle {
     outline: 0;
-}
-
-
-li:hover{
-    font-weight: 900;
 }
 
 .btn-toggle {
@@ -81,5 +76,9 @@ li:hover{
 
 .scrollarea {
     overflow-y: auto;
+}
+
+li:hover{
+    font-weight: 900;
 }
 
