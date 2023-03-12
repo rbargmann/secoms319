@@ -1,20 +1,21 @@
 {
     "Laptops": [
         {
-            "productName": "HP Spectre x360",
+            "productName": "HP Spectre",
+           
             "productID": "1",
             "productDescription": {
-                "size": "14\"",
-                "resolution": "3000 x 2000",
+                "size": "16\"",
+                "resolution": "3072 x 1920 (Retina)",
                 "processor": "Intel 12th Generation Core i7 Evo Platform",
                 "ram": "16GB",
                 "storage": "512 GB",
-                "operatingSystem": "Windows 11 Home"
+                "operatingSystem": "Windows 11 Home",
+                "price": "$1,649.99"
             },
-            "price":"",
-            "image_url":"./images/HPSpectre.jpeg",
-            "product_url": "https://www.bestbuy.com/site/dell-inspiron-2-in-1-14-fhd-touch-laptop-12th-gen-intel-core-i7-16gb-memory-512gb-ssd-platinum-silver/6504381.p?skuId=6504381https://www.bestbuy.com/site/dell-xps-13-plus-13-4-fhd-touch-screen-laptop-12th-gen-intel-evo-i7-16gb-memory-512gb-ssd-silver/6520770.p?skuId=6520770"
-        }, 
+            "image_url": "./images/HPSpectre.jpeg",
+            "product_url": "https://www.bestbuy.com/site/hp-spectre-2-in-1-16-3k-touch-screen-laptop-intel-evo-platform-core-i7-16gb-memory-512gb-ssd-pen-included-nocturne-blue/6501274.p?skuId=6501274"
+        },
         {
             "productName": "Dell Inspiron",
             "productID": "2",
@@ -24,12 +25,12 @@
                 "processor": "12th Gen Intel Core i7",
                 "ram": "16GB",
                 "storage": "512 GB",
-                "operatingSystem": "Windows 11 Home"
+                "operatingSystem": "Windows 11 Home",
+                "price": "$849.99"
             },
-            "price":"",
-            "image_url":"./images/dell-inspiron.jpg",
+            "image_url": "./images/dell-inspiron.jpg",
             "product_url": "https://www.bestbuy.com/site/dell-inspiron-2-in-1-14-fhd-touch-laptop-12th-gen-intel-core-i7-16gb-memory-512gb-ssd-platinum-silver/6504381.p?skuId=6504381https://www.bestbuy.com/site/dell-xps-13-plus-13-4-fhd-touch-screen-laptop-12th-gen-intel-evo-i7-16gb-memory-512gb-ssd-silver/6520770.p?skuId=6520770"
-        }, 
+        },
         {
             "productName": "Samsung Galaxy Book2 360",
             "productID": "3",
@@ -39,10 +40,10 @@
                 "processor": "Intel 12th Generation Core i7 Evo",
                 "ram": "16GB",
                 "storage": "512 GB",
-                "operatingSystem": "Windows 11 Home"
+                "operatingSystem": "Windows 11 Home",
+                "price": "$899.99"
             },
-            "price":"",
-            "image_url":"./images/samsung.jpg",
+            "image_url": "./images/samsung.jpg",
             "product_url": "https://www.bestbuy.com/site/samsung-galaxy-book2-360-13-3-amoled-touch-screen-laptop-intel-12th-gen-core-i7-evo-platform-16gb-memory-512gb-ssd-graphite/6501594.p?skuId=6501594"
         },
         {
@@ -54,10 +55,10 @@
                 "processor": "Apple M1 Pro",
                 "ram": "16GB",
                 "storage": "512 GB",
-                "operatingSystem": "macOS Monterey 12"
+                "operatingSystem": "macOS Monterey 12",
+                "price": "$1,599.00"
             },
-            "price":"",
-            "image_url":"./images/macbook.jpg",
+            "image_url": "./images/macbook.jpg",
             "product_url": "https://www.bestbuy.com/site/macbook-pro-14-laptop-apple-m1-pro-chip-16gb-memory-512gb-ssd-space-gray/6450853.p?skuId=6450853"
         },
         {
@@ -69,10 +70,10 @@
                 "processor": "Intel 12th Generation Core i7 Evo Platform",
                 "ram": "16GB",
                 "storage": "512 GB",
-                "operatingSystem": "Windows 11 Home"
+                "operatingSystem": "Windows 11 Home",
+                "price": "$1,399.99"
             },
-            "price":"",
-            "image_url":"./images/DellXPS13.jpeg",
+            "image_url": "./images/DellXPS13.jpeg",
             "product_url": "https://www.bestbuy.com/site/dell-xps-13-plus-13-4-fhd-touch-screen-laptop-12th-gen-intel-evo-i7-16gb-memory-512gb-ssd-silver/6520770.p?skuId=6520770"
         },
         {
@@ -84,14 +85,13 @@
                 "processor": "Intel 12th Generation Core i7",
                 "ram": "16GB",
                 "storage": "512 GB",
-                "operatingSystem": "Windows 11 Home"
+                "operatingSystem": "Windows 11 Home",
+                "price": "$1,279.99"
             },
-            "price":"",
-            "image_url":"./images/lenovo.jpg",
+            "image_url": "./images/lenovo.jpg",
             "product_url": "https://www.bestbuy.com/site/lenovo-thinkpad-l13-yoga-13-3-wuxga-1920-x-1200-touch-2-in-1-laptop-core-i7-1255u-16gb-memory-512gb-ssd-black/6520607.p?skuId=6520607"
         }
     ],
-
     "Headphones": [
         {
             "productName": "Bose Quiet Comfort 45",
@@ -102,10 +102,10 @@
                 "waterRessistant": "Yes",
                 "batterLife": "22 hours",
                 "microphone": "Yes",
-                "compatableOS": "IOS, Android"
+                "compatableOS": "IOS, Android",
+                "price": "$279.00"
             },
-            "price": "",
-            "image_url":"./images/bose.jpg",
+            "image_url": "./images/bose.jpg",
             "product_url": "https://www.bestbuy.com/site/bose-quietcomfort-45-wireless-noise-cancelling-over-the-ear-headphones-triple-black/6471291.p?skuId=6471291"
         },
         {
@@ -117,10 +117,10 @@
                 "waterRessistant": "Yes",
                 "batterLife": "22 hours",
                 "microphone": "Yes",
-                "compatableOS": "IOS"
+                "compatableOS": "IOS",
+                "price": "$249.99"
             },
-            "price": "",
-            "image_url":"./images/beats.jpg",
+            "image_url": "./images/beats.jpg",
             "product_url": "https://www.bestbuy.com/site/beats-by-dr-dre-beats-studio-wireless-noise-cancelling-headphones-matte-black/5920901.p?skuId=5920901"
         },
         {
@@ -132,10 +132,10 @@
                 "waterRessistant": "No",
                 "batterLife": "20 hours",
                 "microphone": "Yes",
-                "compatableOS": "IOS"
+                "compatableOS": "IOS",
+                "price": "$479.99"
             },
-            "price": "",
-            "image_url":"./images/airpodsmax.jpg",
+            "image_url": "./images/airpodsmax.jpg",
             "product_url": "https://www.bestbuy.com/site/apple-airpods-max-space-gray/6373460.p?skuId=6373460"
         }
     ]
