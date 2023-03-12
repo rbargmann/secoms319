@@ -15,6 +15,7 @@ fetch("data.json")
             let storage = data.Laptops[i].productDescription.storage;
             let os = data.Laptops[i].productDescription.operatingSystem;
             let image = data.Laptops[i].image_url;
+            let price = data.Laptops[i].productDescription.price;
 
             let mycol = document.createElement("div");
 
@@ -33,6 +34,7 @@ fetch("data.json")
                   <li>RAM: ${ram}</li>
                   <li>Storage: ${storage}</li>
                   <li>Operating System: ${os}</li>
+                  <li>Price: ${price}</li>
                 </ul>
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
@@ -50,3 +52,23 @@ fetch("data.json")
         }
 
     }
+
+function searchLaptops() {
+  // get the search term entered by the user
+  const searchTerm = document.getElementById("search-input").value.toLowerCase();
+  
+  // loop through the Laptops array in the JSON file
+  for (let i = 0; i < laptopsData.Laptops.length; i++) {
+    const laptop = laptopsData.Laptops[i];
+    
+    // check if the search term matches the product name
+    if (laptop.productName.toLowerCase().includes(searchTerm)) {
+      // redirect the user to the product page
+      window.location.href = laptop.product_url;
+      return;
+    }
+  }
+  
+  // display a message if no match was found
+  alert("No matching laptops found.");
+}
