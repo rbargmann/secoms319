@@ -54,3 +54,36 @@ fetch("data.json")
         mainContainer.append(mycol);
         }
     }
+  const searchInput = document.getElementById('search-input');
+const searchResults = document.getElementById('search-results');
+
+searchInput.addEventListener('input', function() {
+    // Clear previous results
+    searchResults.innerHTML = '';
+    
+    // Get input value
+    const inputValue = searchInput.value.toLowerCase();
+    
+    // Fetch data from JSON file
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            // Filter data based on input value
+            const filteredData = data.filter(item => item.productName.toLowerCase().includes(inputValue));
+            
+            // Create HTML for search results
+            const searchResultsHTML = filteredData.map(item => `
+                <div class="search-result">
+                    <h3>${item.productName}</h3>
+                    <p>${item.connectionType}</p>
+                </div>
+            `).join('');
+            
+            // Display search results
+            searchResults.innerHTML = searchResultsHTML;
+            console.log(searchResults)
+        })
+        .catch(error => console.error(error));
+});
+
+}
