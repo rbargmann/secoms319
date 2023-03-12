@@ -15,7 +15,8 @@ fetch("data.json")
             let microphone = data.Headphones[i].productDescription.microphone;
             let compatableOS = data.Headphones[i].productDescription.compatableOS;
             let image = data.Headphones[i].image_url;
-        
+            let price = data.Headphones[i].productDescription.price;
+
 
         let mycol = document.createElement("div");
 
@@ -34,6 +35,7 @@ fetch("data.json")
                   <li>Battery Life: ${batteryLife}</li>
                   <li>Built-in Microphone: ${microphone} </li>
                   <li>Compatable Software: ${compatableOS}</li>
+                  <li>Price: ${price}</li>
                 </ul>
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
