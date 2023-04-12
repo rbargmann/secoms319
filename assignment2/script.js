@@ -6,6 +6,17 @@ const Shop = () => {
   const [cartTotal, setCartTotal] = useState(0);
   const [showClass, setShowClass] = useState(true);
 
+  const [query, setQuery] = useState('');
+  const handleChange = (e) => {
+    setQuery(e.target.value);
+    console.log("Step 6 : in handleChange, Target Value :", e.target.value, " Query Value :", query);
+    const results = listItems.filter(eachProduct => {
+      if (e.target.value === "") return listItems;
+      return eachProduct.title.toLowerCase().includes(e.target.value.toLowerCase())
+    });
+    setCart(results);
+  }
+
   const addToCart = (el) => {
     setCart([...cart, el]);
   };
@@ -55,7 +66,7 @@ const Shop = () => {
             <button type="button" variant="light" onClick={() => addToCart(el)}> + </button>
           </div>
           <div class="card-body">
-          ${el.price} <span class="close">&#10005;</span>{howManyofThis(el.id)}
+            ${el.price} <span class="close">&#10005;</span>{howManyofThis(el.productID)}
           </div>
         </div>
       </div>
@@ -64,7 +75,7 @@ const Shop = () => {
 
   const listCart = items.map((el) => (
     // PRODUCT
-    <div class="row border-top border-bottom" key={el.productID}>
+    <div class="row border-top border-bottom" key={el.id}>
       <div class="row main align-items-center">
         <div class="col-2">
           <img class="img-fluid" src={el.image_url} />
@@ -107,14 +118,7 @@ const Shop = () => {
     </div>
   ));
 
-  // return (
-  //   <div>
-  //     <div>{listItems}</div>
-  //     <div>Itesm in Cart :</div>
-  //     <div>{cartItems}</div>
-  //     <div>Order total to pay :{cartTotal}</div>
-  //   </div>
-  // );
+  // Write a search method for this?
 
   return (
     <body>
@@ -135,11 +139,6 @@ const Shop = () => {
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="./index.html">
-                    Home
-                  </a>
-                </li>
-                <li class="nav-item">
                   <a
                     class="nav-link active"
                     aria-current="page"
@@ -148,17 +147,15 @@ const Shop = () => {
                     Laptops
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./headphones.html">
-                    Headphones
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./aboutus.html">
-                    About us
-                  </a>
-                </li>
               </ul>
+
+
+              <div className="py-10">
+                <input type="search" value={query} onChange={handleChange} />
+              </div>
+
+
+
               <button type="button" onClick={() => setShowClass(!showClass)}>
                 {" "}
                 Checkout Cart{" "}
@@ -240,5 +237,5 @@ const Shop = () => {
     </body>
   );
 };
-
 export default Shop;
+
