@@ -163,20 +163,7 @@ function App() {
                     Home
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="./laptops.html"
-                  >
-                    Laptops
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./headphones.html">
-                    Headphones
-                  </a>
-                </li>
+              
                 <li class="nav-item">
                   <a class="nav-link" href="./aboutus.html">
                     About us
