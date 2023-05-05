@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMugHot } from '@fortawesome/free-solid-svg-icons';
+import { faMugHot } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -11,13 +11,25 @@ function App() {
   const [viewer1, setViewer1] = useState(false);
 
   const addToCart = (el) => {
-    setCart([...cart, el]);
+    const existingItem = cart.find((item) => item._id === el._id);
+    if (existingItem) {
+      const updatedCart = cart.map((item) => {
+        if (item._id === existingItem._id) {
+          return { ...item, quantity: item.quantity + 1 };
+        } else {
+          return item;
+        }
+      });
+      setCart(updatedCart);
+    } else {
+      const updatedCart = [...cart, { ...el, quantity: 1 }];
+      setCart(updatedCart);
+    }
   };
 
   useEffect(() => {
     getAllProducts();
   }, []);
-
 
   useEffect(() => {
     total();
@@ -26,7 +38,7 @@ function App() {
   const total = () => {
     let totalVal = 0;
     for (let i = 0; i < cart.length; i++) {
-      totalVal += cart[i].price;
+      totalVal += cart[i].price * cart[i].quantity;
     }
     setCartTotal(totalVal);
   };
@@ -96,9 +108,9 @@ function App() {
     </div>
   ));
 
-  const listCart = product.map((el) => (
+  const listCart = cart.map((el) => (
     // PRODUCT
-    <div class="row border-top border-bottom" key={el._id}>
+    <div class="row border-top border-bottom mx-auto" key={el._id}>
       <div class="row main align-items-center">
         <div class="col-2">
           <img class="img-fluid" src={el.image_url} />
@@ -129,8 +141,8 @@ function App() {
   ));
 
   function howManyofThis(id) {
-    let hmot = cart.filter((cartItem) => cartItem._id === id);
-    return hmot.length;
+    const item = cart.find((item) => item._id === id);
+    return item ? item.quantity : 0;
   }
 
   const cartItems = cart.map((el) => (
@@ -163,7 +175,20 @@ function App() {
                     Home
                   </a>
                 </li>
-              
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./laptops.html"
+                  >
+                    Laptops
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./headphones.html">
+                    Headphones
+                  </a>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./aboutus.html">
                     About us
@@ -194,7 +219,7 @@ function App() {
                   document.getElementById("cart").classList.remove("collapse");
                 }}
               >
-                <i className="fas fa-shopping-cart"></i>Cart
+                <i className="fa fa-shopping-cart"></i>
               </button>
             </div>
           </div>
@@ -231,6 +256,48 @@ function App() {
       }
 
       {
+        <section class="py-5 text-center container">
+          <div class="card collapse" id="cart">
+            <div class="col-md-8 cart">
+              <div class="title">
+                <div class="row py-lg-5">
+                  <div class="col-lg-6 col-md-8 mx-auto">
+                    <h4>
+                      <b>Cart</b>
+                    </h4>
+                  </div>
+                  <div class="col align-self-center text-right text-muted">
+                    Products selected {cart.length}
+                  </div>
+                </div>
+              </div>
+              <div>{listCart}</div>
+            </div>
+            <div class="float-end">
+              <p class="mb-0 me-5 d-flex align-items-center">
+                <button
+                  type="button"
+                  className="btn btn-dark"
+                  onClick={() => {
+                    document
+                      .getElementById("validation")
+                      .classList.remove("collapse");
+                    document.getElementById("cart").classList.add("collapse");
+                  }}
+                >
+                  Checkout
+                </button>
+                <span class="small text-muted me-2">Order total:</span>
+                <span class="lead fw-normal" id="cartTotal">
+                  ${cartTotal}
+                </span>
+              </p>
+            </div>
+          </div>
+        </section>
+      }
+
+      {
         <footer
           class="text-muted py-5"
           background-color="rgb(224, 213, 213)"
@@ -250,51 +317,12 @@ function App() {
       }
 
       {
-        <div class="card collapse" id="cart">
-          <div class="col-md-8 cart">
-            <div class="title">
-              <div class="row">
-                <div class="col">
-                  <h4>
-                    <b>Cart</b>
-                  </h4>
-                </div>
-                <div class="col align-self-center text-right text-muted">
-                  Products selected {cart.length}
-                </div>
-              </div>
-            </div>
-            <div>{listCart}</div>
-          </div>
-          <div class="float-end">
-            <p class="mb-0 me-5 d-flex align-items-center">
-              <button
-                type="button"
-                onClick={() => {
-                  document
-                    .getElementById("validation")
-                    .classList.remove("collapse");
-                  document.getElementById("cart").classList.add("collapse");
-                }}
-              >
-                Checkout
-              </button>
-              <span class="small text-muted me-2">Order total:</span>
-              <span class="lead fw-normal" id="cartTotal">
-                ${cartTotal}
-              </span>
-            </p>
-          </div>
-        </div>
-      }
-
-      {
         <div class="container">
           <div class="row">
             <div class="col-2"></div>
 
             <div class="col-8 card collapse" id="validation">
-              <h1>Javascript Form Validation</h1>
+              <h1>Checkout</h1>
 
               <div id="liveAlertPlaceholder"></div>
 
@@ -376,6 +404,57 @@ function App() {
                   </label>
                   <select id="inputState" class="form-select">
                     <option selected>Choose...</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District Of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
                   </select>
                 </div>
                 <div class="col-md-2">
@@ -399,7 +478,7 @@ function App() {
                 <div class="col-12">
                   <button
                     type="button"
-                    class="btn btn-success"
+                    class="btn btn-dark"
                     onClick={() => {
                       const alertPlaceholder = document.getElementById(
                         "liveAlertPlaceholder"
